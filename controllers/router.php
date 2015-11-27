@@ -18,9 +18,23 @@ function __autoload($className){
 	    /* La clase Producto_Model está en el archivo models/producto.php */
 	    $parse = explode('_' , $className);
 	    $filename = $parse[0];
+	    $sufijo = strtolower($parse[1]);
+
+	    /* Componer la carpeta donde se encuentra el archivo */
+	    switch ($sufijo){
+	    	case 'model':
+	    		$folder = '/models/';
+	    		break;
+	    	case 'library':
+	    		$folder = '/libraries/';
+	    		break;
+	    	case 'driver':
+	    		$folder = '/libraries/drivers/'
+	    }
+		
 	    
 	    /* Componer el nombre del archivo */
-	    $file = SERVER_ROOT . '/models/' . strtolower($filename) . '.php';
+	    $file = SERVER_ROOT . $folder . strtolower($filename) . '.php';
 	    
 	    /* Verificar que exista */
 	    if (file_exists($file)){
