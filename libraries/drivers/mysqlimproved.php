@@ -13,7 +13,7 @@ class MysqlImproved_Driver extends Database_Library
 	{
 		/* Parámetros de conexión */
 		$host = 'localhost';
-		$user = 'djaimes';
+		$user = 'admin';
 		$password = 'colage';
 		$database = 'mitienda';
 
@@ -41,8 +41,8 @@ class MysqlImproved_Driver extends Database_Library
 		}
 	}
 		
-	/* Obtener una file del resultado de un query */
-	public function fetch($type, 'object'){
+	/* Obtener una fila del resultado de un query */
+	public function fetch($type = 'object'){
 		if ( isset($this->result) ){
 			switch ($type){
 				case 'array':
@@ -51,7 +51,7 @@ class MysqlImproved_Driver extends Database_Library
 				case 'object':
 					// por hacer
 				default:
-					$row = $this-result->fetch_object();
+					$row = $this->result->fetch_object();
 					break;
 			}
 			return $row;

@@ -29,10 +29,9 @@ function __autoload($className){
 	    		$folder = '/libraries/';
 	    		break;
 	    	case 'driver':
-	    		$folder = '/libraries/drivers/'
+	    		$folder = '/libraries/drivers/';
 	    }
 		
-	    
 	    /* Componer el nombre del archivo */
 	    $file = SERVER_ROOT . $folder . strtolower($filename) . '.php';
 	    
@@ -41,7 +40,7 @@ function __autoload($className){
 	        include_once($file);        
 	    } else {
 	        die("El archivo '$filename' con la clase '$className' no existe.");    
-	   }
+	    }
 }
 
 $request = $_SERVER['QUERY_STRING'];
