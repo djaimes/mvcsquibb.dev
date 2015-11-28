@@ -20,6 +20,10 @@ class Producto_Model {
     public function getProducto($codigoBarra){
         // $producto = $this->productos[$clave];
         $this->db->connect();
+		
+		// Sanitizar la entrada para evitar injection sql
+		$codigoBarra = $this->db->escape($codigoBarra);
+		
         $this->db->prepare(
             "
             SELECT descripcion, precio 

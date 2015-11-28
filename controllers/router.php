@@ -43,6 +43,11 @@ function __autoload($className){
 	    }
 }
 
+/**
+* request es lo que viene en la URL a partir del signo ? 
+* http://mvcsquibb.dev/index.php?producto&codigobarra=76534520012342
+*/
+
 $request = $_SERVER['QUERY_STRING'];
 $url = explode('&', $request);
 $controlador = array_shift($url);
@@ -52,7 +57,12 @@ foreach($url as $var){
 	$var = explode('=', $var);
 	$variable = $var[0];
 	$valor = $var[1];
-	$parametros[$variable] = $valor;
+	/**
+	* El urldecode quita caracteres como galleta%20cracket%20salada
+	* y devuelve "galleta cracket salada". Nunca confie en lo que manda 
+	* el usuario. Siempre valida la entrada y sanitilzala
+	*/
+	$parametros[$variable] = urldecode($valor);
 }
 
 /* componer la ruta del controlador llamado */
