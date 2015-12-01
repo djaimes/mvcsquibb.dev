@@ -1,26 +1,14 @@
-26-nov-2015	
-		MVC Parte 1
+1. 	Primero se debe crear la base de datos
+	Las instrucciones las encuentras en ./data
 
-27-nov-2015	
-		MVC Parte 2
-		Me quedé en adding a database
+2.	Configura el sitio, las instrucciones están en ./config
 
-27-nov-2015	
-		Todo funciona hasta la extracción de la base de datos
-		Probé con esta liga:
-		http://mvcsquibb.dev/index.php?producto&codigobarra=7501000629770
-		Me quedé en la página 7 de 9 del 2do. tutorial
+3.	Prueba el sistema
 
-27-nov-2015	
-		Terminé la parte 2, todo funciona.
-		He creado el directorio snaps para las capturas de pantalla
+	http://mvcsquibb.dev/index.php?producto&codigobarra=7501055900047
+	
+	el resultado debe mirarse como está en el directorio ./snaps
 
-30-nov-2015
-		Inicio la tercera parte del tutorial
-		Termino el tutorial
-		Todo queda operando.
-		La base de datos se llama mitienda
-		Usuario: admin Password: colage
-		Para este tutorial solo uso la tabla producto.
-		Creo un directorio que tiene un respaldo de la BD.
-		Fin
+4. Disfruta la experiencia de aprendizaje
+
+5. Thanks Mr. John Squibb @johnsquibb

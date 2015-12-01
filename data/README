@@ -1,0 +1,10 @@
+1. Crear la base de datos
+
+	$ mysql -uroot -p
+	password: colage
+
+	mysql> create database mvcsquibb;
+	mysql> grant all privileges on mvcsquib.* to admin@localhost identified by 'colage';
+	mysql> source mvcsquibb.sql;
+	
+
