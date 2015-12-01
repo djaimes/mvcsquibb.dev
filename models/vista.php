@@ -15,7 +15,8 @@ class Vista_Model
      * Mantiene estatus de la renderización
      */
     private $render = FALSE;
-    /**
+    
+	/**
      * Cargar template
      */
     public function __construct($template){
@@ -32,11 +33,26 @@ class Vista_Model
 		$this->data[$variable] = $value;
 	}
     
-    public function __destruct(){
+    public function render($direct_output = TRUE){
+		// Activa la captura de la salida para pasarla al buffer
+		if ($direct_output !== TRUE){
+			ob_start();
+		}
+		
         // Parsea las variables de data en variables locales, para que redericen la vista.
 		$data = $this->data;
 		
-        // renderizar la vista
+        // Obtener el template
 		include($this->render);
+		
+		// Recibir el contenido del buffer y retornarlo
+		if ($direct_output !== TRUE){
+			return ob_get_clean();
+		}
+		
     }
+	
+	public function __destruct(){
+		
+	}
 }

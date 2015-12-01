@@ -14,3 +14,13 @@
 27-nov-2015	
 		Terminé la parte 2, todo funciona.
 		He creado el directorio snaps para las capturas de pantalla
+
+30-nov-2015
+		Inicio la tercera parte del tutorial
+		Termino el tutorial
+		Todo queda operando.
+		La base de datos se llama mitienda
+		Usuario: admin Password: colage
+		Para este tutorial solo uso la tabla producto.
+		Creo un directorio que tiene un respaldo de la BD.
+		Fin

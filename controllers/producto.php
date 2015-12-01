@@ -18,6 +18,9 @@ class Producto_Controller {
 		// Asignar datos de productos a la vista
 		$view->assign('nombre', $producto['descripcion']);
 		$view->assign('precio', $producto['precio']);		
+		
+		// Renderizar
+		$view->render();
     }
 }
 ?>
