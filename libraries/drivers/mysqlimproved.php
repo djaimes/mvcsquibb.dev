@@ -18,7 +18,7 @@ class MysqlImproved_Driver extends Database_Library
 		$host = 'localhost';
 		$user = 'admin';
 		$password = 'colage';
-		$database = 'mitienda';
+		$database = 'mvcsquibb';
 
 		/* Crear conexión */
 		$this->connection = new mysqli($host, $user, $password, $database);
